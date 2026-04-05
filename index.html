@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Luca Studio Artwork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo -->
+                <img src="img/Logo.png" alt="Company Logo" width="133" height="40">
+    
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+                    <span class="menu-text">Menu</span>
+                    <span class="menu-icon"></span>
+                </button>
+                <ul id="nav-list" class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">ART PROGRAMS</a></li>
+                    <li><a href="#">PRICING</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Shopping Cart -->
+            <div class="header-cart">
+                <img src="img/cart.png" alt="Shopping Cart" width="24" height="24">
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1><span>Luca Studio</span> for the Modern Collector</h1>
+            <p>Art has the power to capture what words cannot. My glassworks are inspired by the changing light, quiet moments, and raw textures of everyday life. Each piece tells its own story.</p>
+        </section>
+    </main>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', !isExpanded);
+            nav.classList.toggle('is-open');
+        });
+    </script>
+</body>
+</html>
